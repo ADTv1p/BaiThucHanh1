@@ -2,6 +2,7 @@ import express from "express";
 import getHomePage from '../controllers/HomeController.js';
 import aboutPage from "../controllers/AboutController.js";
 import getContact from "../controllers/ContactController.js";
+import userController from '../controllers/userController.js';
 const router = express.Router()
 const initWebRoute = (app) => {
     router.get('/', getHomePage)
@@ -16,23 +17,25 @@ const initWebRoute = (app) => {
 
     router.get('/edit-user/:username', userController.editUser)
 
-    router.post('/update-user', userController.updateUser)
+    // router.post('/edit-user/:username', userController.updateUser)
+
+    router.post('/update-user/:username', userController.updateUser)
 
     router.post('/delete-user', userController.deleteUser)
 
-    router.get('/login', userController.formLoginUser)
+    // router.get('/login', userController.formLoginUser)
 
-    router.get('/logout', userController.logOut)
+    // router.get('/logout', userController.logOut)
 
-    router.post('/verify-login', userController.loginUser)
+    // router.post('/verify-login', userController.loginUser)
 
     router.get('/create-new-user', userController.createUser)
 
     router.post('/insert-new-user', userController.insertUser)
 
-    router.get('/upload-file', userController.uploadFile)
+    // router.get('/upload-file', userController.uploadFile)
 
-    router.post('/save-file', userController.saveFileUpload)
+    // router.post('/save-file', userController.saveFileUpload)
 
     return app.use('/', router)
 }

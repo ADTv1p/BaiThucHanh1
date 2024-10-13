@@ -5,5 +5,6 @@ const pool = mysql.createPool ({
     database: 'quanlynguoidung',
     password: ''
 })
+
 const connection = pool.promise();
 export default connection
