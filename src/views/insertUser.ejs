@@ -1,39 +1,39 @@
 <div class="container mt-5">
-    <h1>Create New User</h1>
+    <h1>Thêm người dùng</h1>
     <form action="/insert-new-user" method="POST">
         <table class="table">
             <tbody class="table-group-divider">
                 <tr>
-                    <th scope="col">Username</th>
+                    <th scope="col">Tài khoản</th>
                     <td>
                         <input type="text" name="username" required>
                     </td>
                 </tr>
                 <tr>
-                    <th scope="col">Password</th>
+                    <th scope="col">Mật khẩu</th>
                     <td>
                         <input type="text" name="password" required>
                     </td>
                 </tr>
                 <tr>
-                    <th scope="col">Fullname</th>
+                    <th scope="col">Họ tên</th>
                     <td>
                         <input type="text" name="fullname" required>
                     </td>
                 </tr>
                 <tr>
-                    <th scope="col">Address</th>
+                    <th scope="col">Địa chỉ</th>
                     <td>
                         <input type="text" name="address" required>
                     </td>
                 </tr>
                 <tr>
-                    <th scope="col">Sex</th>
+                    <th scope="col">Giới tính</th>
                     <td>
                         <select name="sex" required>
-                            <option value="Nam">Male</option>
-                            <option value="Nữ">Female</option>
-                            <option value="Khác">Other</option>
+                            <option value="Nam">Nam</option>
+                            <option value="Nữ">Nữ</option>
+                            <option value="Khác">Khác</option>
                         </select>
                     </td>
                 </tr>
@@ -45,7 +45,7 @@
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <button type="submit" class="btn btn-primary">Create User</button>
+                        <button type="submit" class="btn btn-primary">Thêm</button>
                     </td>
                 </tr>
             </tbody>

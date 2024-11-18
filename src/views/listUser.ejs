@@ -13,10 +13,10 @@
     <thead>
         <tr>
             <th style="width: 50px;">STT</th>
-            <th style="width: 150px;">Username</th>
-            <th style="width: 200px;">Full name</th>
-            <th style="width: 200px;">Address</th>
-            <th style="width: 100px;">Setting</th>
+            <th style="width: 150px;">Tài khoản</th>
+            <th style="width: 200px;">Họ tên</th>
+            <th style="width: 200px;">Địa chỉ</th>
+            <th style="width: 100px;">Tác vụ</th>
         </tr>
     </thead>
     <tbody>
@@ -38,7 +38,7 @@
                             <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                         </span>
                     </a>
-                    <form action="/delete-user" method="post" class="del">
+                    <form action="/delete-user" method="post" class="del" onsubmit="return confirm('Bạn có chắc chắn muốn xóa người dùng này?');">
                         <input type="hidden" value="<%= data.rows[i].username %>" name="username">
                         <label for="<%= data.rows[i].username %>">
                             <span class="setting" style="color: black;">
